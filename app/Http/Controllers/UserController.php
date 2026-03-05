@@ -5,10 +5,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
-public function index()
-{
-    $jumlah = UserModel::where('level_id', 2)->count();
+    public function index()
+    {
+        $user = UserModel::firstOrNew(
+            [
+                'username' => 'manager33',
+                'nama' => 'Manager Tiga Tiga',
+                'password' => Hash::make('12345'),
+                'level_id' => 2
+            ],
+        );
 
-    return view('user', ['jumlah' => $jumlah]);
-}
+        $user->save();
+
+        return view('user', ['data' => $user]);
+    }
 }
