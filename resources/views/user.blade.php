@@ -5,26 +5,13 @@
 </head>
 <body>
 
-<h2>Data User</h2>
 
-<table border="1" cellpadding="10">
-    <tr>
-        <th>ID</th>
-        <th>Level</th>
-        <th>Username</th>
-        <th>Nama</th>
-    </tr>
+<h3>Data User</h3>
 
-    @foreach ($data as $u)
-    <tr>
-        <td>{{ $data->user_id }}</td>
-        <td>{{ $data->level_id }}</td>
-        <td>{{ $data->username }}</td>
-        <td>{{ $data->nama }}</td>
-    </tr>
-    @endforeach
-
-</table>
+<div style="border:1px solid black; width:200px; padding:10px;">
+    Jumlah Pengguna <br>
+    <b>{{ $jumlah }}</b>
+</div>
 
 </body>
 </html>
