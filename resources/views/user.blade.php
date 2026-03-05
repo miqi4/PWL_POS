@@ -17,10 +17,10 @@
 
     @foreach ($data as $u)
     <tr>
-        <td>{{ $u->user_id }}</td>
-        <td>{{ $u->level_id }}</td>
-        <td>{{ $u->username }}</td>
-        <td>{{ $u->nama }}</td>
+        <td>{{ $data->user_id }}</td>
+        <td>{{ $data->level_id }}</td>
+        <td>{{ $data->username }}</td>
+        <td>{{ $data->nama }}</td>
     </tr>
     @endforeach
 
